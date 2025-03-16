@@ -1,0 +1,18 @@
+<h3>Tasks List</h3>
+<hr>
+<div class="d-flex justify-content-end mb-3">
+  <a routerLink="/manage" class="btn btn-outline-primary">
+    <i class="fas fa-plus"></i>&nbsp; Add Task
+  </a>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let task of allTasks">
+      <app-task-card
+        [task]="task"
+        (archive)="archiveTask($event)"
+      >
+      </app-task-card>
+    </div>
+  </div>
+</div>

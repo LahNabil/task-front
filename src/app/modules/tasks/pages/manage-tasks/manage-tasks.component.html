@@ -1,0 +1,25 @@
+
+<div class="p-2">
+  <h2>Manage Task</h2>
+  <hr>
+  <div class="container">
+    <form class="row g-3">
+      <div>
+        <label for="title" class="form-label">Title</label>
+        <input [(ngModel)]="task.title" name="title" type="text" class="form-control" id="title" placeholder="Task Title">
+      </div>
+      <div>
+        <label for="description" class="form-label">Description</label>
+        <input [(ngModel)]="task.description" name="description" type="text" class="form-control" id="description" placeholder="Task Description">
+      </div>
+      <div class="">
+        <button (click)="saveTask()" type="submit" class="btn btn-outline-primary">
+          <i class="fas fa-save"></i>&nbsp; Enregistrer
+        </button>
+        <a routerLink="/departement" class="btn btn-link text-danger">
+          <i class="fas fa-times"></i>&nbsp; Annuler
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
